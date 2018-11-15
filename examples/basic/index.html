@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <noscript>Your browser does not support JavaScript!</noscript>
+
+    <ul id="changeList"></ul>
+
+    <div id="todoList"></div>
+
+    <div id="countList"></div>
+
+    <ul id="showScope"></ul>
+
+    <template juel="todoList">
+        <ul>Click Items {{ todoList.map(addItem) }}</ul>
+    </template>
+
+    <template juel="todoItem">
+        <li><button click="{{ click }}">{{ text }}</button></li>
+    </template>
+
+    <script src="./index.build.min.js"></script>
+</body>
+
+</html>

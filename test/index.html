@@ -1,0 +1,30 @@
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link href="./mocha.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <ul id="changeList" style="display:none;"></ul>
+
+    <div id="todoList" style="display:none;"></div>
+
+    <div id="countList" style="display:none;"></div>
+
+    <template juel="todoList">
+        <ul>Click Items {{ todoList.map(addItem) }}</ul>
+    </template>
+
+    <template juel="todoItem">
+        <li><button click="{{ click }}">{{ text }}</button></li>
+    </template>
+
+    <div id="mocha"></div>
+
+    <script src="./mocha.min.js"></script>
+    <script src="./index.build.min.js"></script>
+</body>
+
+</html>

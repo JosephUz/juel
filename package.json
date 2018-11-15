@@ -1,0 +1,42 @@
+{
+  "name": "juel",
+  "version": "1.0.0",
+  "description": "For rendering html element from javascript object using by html template in client-side",
+  "main": "index.js",
+  "scripts": {
+    "start": "start chrome ./examples/basic/index.html",
+    "test": "start chrome ./test/index.html",
+    "build": "gulp basic",
+    "build.test": "gulp test",
+    "build.mocha": "gulp test mochajs mochacss"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JosephUz/juel.git"
+  },
+  "keywords": [
+    "client-side",
+    "insert object",
+    "render template"
+  ],
+  "author": "JosephUz",
+  "license": "MIT",
+  "files": [
+    "package.json",
+    "index.js",
+    "libs"
+  ],
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "gulp": "^3.9.1",
+    "gulp-css": "^0.1.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-streamify": "^1.0.2",
+    "gulp-uglify-es": "^1.0.4",
+    "mocha": "^5.2.0",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "html-parse-stringify": "^1.0.3"
+  }
+}
