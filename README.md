@@ -51,7 +51,7 @@ $ npm install juel
 
 ```javascript
 
-const juel = require('../../index.js');
+const juel = require('juel');
 
 // for update global scope
 function changeList(e) {
