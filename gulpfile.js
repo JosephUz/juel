@@ -19,7 +19,7 @@ gulp.task('test', function () {
     return browserify('./test/index')
         .bundle()
         .pipe(source('index.js'))
-        // .pipe(streamify(uglify()))
+        .pipe(streamify(uglify()))
         .pipe(rename({ extname: '.build.min.js' }))
         .pipe(gulp.dest('./test'));
 });
