@@ -259,6 +259,27 @@ describe("index.js test", function () {
             done(err);
         }
     });
+
+    it("juel container and scope change", function (done) {
+        try {
+            juel.template.set('juelContainer', '<juel>{{ value }}</juel>');
+
+            var scope = juel.scope({
+                value: "juelContainerTest"
+            });
+
+            juel.append("#juelContainerTest2", "juelContainer", scope);
+
+            scope.value = 'juelContainerTest2';
+
+            if (document.getElementById('juelContainerTest2').innerHTML == "juelContainerTest2")
+                done();
+            else
+                done(new Error('Fail!'));
+        } catch (err) {
+            done(err);
+        }
+    });
 });
 
 mocha.checkLeaks();

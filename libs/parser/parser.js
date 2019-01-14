@@ -14,4 +14,13 @@ Parser.prototype.toHTML = function () {
     return this.ast.toHTML();
 }
 
+Parser.prototype.static = function (container) {
+    if (this.ast.name == 'juel') {
+        this.ast.static = container;
+        return true;
+    } else {
+        return false;
+    }
+}
+
 module.exports = Parser;

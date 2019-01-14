@@ -11,6 +11,7 @@ function AST(ast, parsered) {
     this.oldHtml = null;
     this.children = [];
     this.attrs = [];
+    this.static = null;
 
     Object.defineProperties(this, {
         html: {
@@ -128,7 +129,7 @@ AST.prototype.render = function () {
             node.append(document.createTextNode(value));
         }
     } else {
-        node = document.createElement(this.name);
+        node = this.static || document.createElement(this.name);
     }
     return node;
 }

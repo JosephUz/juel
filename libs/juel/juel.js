@@ -18,6 +18,10 @@ Juel.prototype.toHTML = function () {
     return this.parsered.toHTML();
 }
 
+Juel.prototype.static = function (container) {
+    return this.parsered.static(container);
+}
+
 Juel.prototype.setId = function (id) {
     this.id = id;
     cache.set(this);
