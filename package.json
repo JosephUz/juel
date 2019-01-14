@@ -1,6 +1,6 @@
 {
   "name": "juel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "For rendering html element from javascript object using by html template in client-side",
   "main": "index.js",
   "scripts": {
