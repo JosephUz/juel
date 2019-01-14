@@ -242,6 +242,23 @@ describe("index.js test", function () {
             done(err);
         }
     });
+
+    it("juel container disappears", function (done) {
+        try {
+            juel.template.set('juelContainer', '<juel>{{ value }}</juel>');
+
+            juel.append("#juelContainerTest", "juelContainer", {
+                value: "juelContainerTest"
+            });
+
+            if (document.getElementById('juelContainerTest').innerHTML == "juelContainerTest")
+                done();
+            else
+                done(new Error('Fail!'));
+        } catch (err) {
+            done(err);
+        }
+    });
 });
 
 mocha.checkLeaks();

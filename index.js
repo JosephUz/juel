@@ -22,7 +22,13 @@ exports.append = function (container, name, scope, common) {
 
     jueled = exports.create(name, scope, common);
 
-    container.append(jueled.toHTML());
+    var html = jueled.toHTML();
+    if (html.tagName == 'JUEL')
+        Array.prototype.forEach.call(html.childNodes, function (item) {
+            container.append(item);
+        });
+    else
+        container.append(html);
 
     return jueled;
 }

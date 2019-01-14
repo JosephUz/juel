@@ -136,9 +136,31 @@ juel.append('#showScope', 'scopeShowBtn', {}, {
 
 index.build.js file is generated from index.js with libraries like browserify or babel or parcel or webpack.
 
+
+### juel Container
+
+If you want to write a script without container, write it into the juel tag. During append operation juel disappears.
+
+```html
+
+<template juel="juelTag">
+    <juel>{{ value }}</juel>
+</template>
+
+```
+
 ### [Build Sample][]
 
 [Build Sample]: https://github.com/JosephUz/juel/tree/master/gulpfile.js
+
+
+## Changelog
+
+All notable changes to this project will be documented in this file.
+
+### [Changelog][]
+
+[Changelog]: https://github.com/JosephUz/juel/blob/master/CHANGELOG.md
 
 
 ## Examples
